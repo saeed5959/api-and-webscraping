@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
-<title>W3.CSS Template</title>
+<title>bitcoin and gold price</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -70,13 +70,13 @@ body, html {
 <!-- Pricing Section -->
 <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="gold">
   <h3>قیمت طلا و سکه و بورس</h3>
-  <p class="w3-large">نمایش قیمت طلا و دلار و بورس با روش web scrapy از سایت<a href="https://www.tgju.org/"> www.tgju.org</a> </p>
-  <div class="w3-row-padding" style="margin-top:64px">
+  <p class="w3-large" style="font-family:verdana">نمایش قیمت طلا و دلار و بورس با روش web scrapy از سایت<a href="https://www.tgju.org/"> www.tgju.org</a> </p>
+  <div class="w3-row-padding" style="margin-top:64px;font-family:verdana;">
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
         <li class="w3-black w3-xlarge w3-padding-32">طلا</li>
-        <li class="w3-padding-16"><b>قیمت:</b> </li>
-        <li class="w3-padding-16"><b>تغییرات:</b></li>
+        <li class="w3-padding-16"><b>قیمت(ریال):{{gold_price}}</b></li>
+        <li class="w3-padding-16"><b>تغییرات:{{gold_change}}</b></li>
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-black w3-padding-large">GOLD</button>
         </li>
@@ -85,8 +85,8 @@ body, html {
     <div class="w3-third">
       <ul class="w3-ul w3-white w3-hover-shadow">
         <li class="w3-red w3-xlarge w3-padding-48">بورس</li>
-        <li class="w3-padding-16"><b>شاخص:</b> </li>
-        <li class="w3-padding-16"><b>تغییرات:</b> </li>
+        <li class="w3-padding-16"><b>شاخص:{{stock_price}}</b> </li>
+        <li class="w3-padding-16"><b>تغییرات:{{stock_change}}</b> </li>
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-black w3-padding-large">STOCK MARKET</button>
         </li>
@@ -95,8 +95,8 @@ body, html {
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
         <li class="w3-black w3-xlarge w3-padding-32">دلار</li>
-        <li class="w3-padding-16"><b>قیمت:</b> </li>
-        <li class="w3-padding-16"><b>تغییرات:</b> </li>
+        <li class="w3-padding-16"><b>قیمت(ریال):{{dollar_price}}</b> </li>
+        <li class="w3-padding-16"><b>تغییرات:{{dollar_change}}</b> </li>
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-black w3-padding-large">DOLLAR</button>
         </li>
