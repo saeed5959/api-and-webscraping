@@ -1,12 +1,13 @@
 # api_webscraping
 in progress
-****
+
 ~~~~
 Back-end:Django(Python)
 Front-end:HTML&CSS
 ~~~~
 
 ####This website contains :
+
 ~~~~
 1)WEB SCRAPY
     prices of gold & dollar & stock market
@@ -17,7 +18,7 @@ Front-end:HTML&CSS
 ~~~~
 2)API
     prices of crypto market
-    using "api" tool from  
+    using "api" tool from  https://www.coingecko.com/
 
 ~~~~
 ####How to use?
