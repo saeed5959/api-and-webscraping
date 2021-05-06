@@ -112,7 +112,7 @@ body, html {
   <p class="w3-large">نمایش قیمت ارزهای دیجیتال با استفاده از API سایت <a herf="www.coingecko.com">www.coingecko.com</a></p>
   <form action="/#crypto" method="POST">{% csrf_token %}
       <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button type="submit" name="crypto"><i class="fa fa-search"></i></button>
     </form>
   <p><strong>{{error}}</strong></p>
   <div class="w3-row-padding" style="margin-top:64px">
@@ -179,14 +179,14 @@ body, html {
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> تهران , آزادی</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> تلفن : 09198538041</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> ایمیل : saeedmr881@gmail.com</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
+    <p><strong>          {{thank}}</strong></p><br>
+    <form action="/#contact" method="POST">{% csrf_token %}
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-black" type="submit">
+        <button class="w3-button w3-black" type="submit" name="contact">
           <i class="fa fa-paper-plane"></i> ارسال
         </button>
       </p>
