@@ -114,6 +114,7 @@ body, html {
       <input type="text" placeholder="Search.." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
+  <p><strong>{{error}}</strong></p>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-section">
 
@@ -122,16 +123,13 @@ body, html {
     <div class="w3-third" style="margin-top:64px;font-family:verdana;">
       <ul class="w3-ul w3-white w3-hover-shadow">
         <li class="w3-red w3-xlarge w3-padding-48">{{coin}}</li>
-        <li class="w3-padding-16"><b></b> {{coin_price}}</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
+        <li class="w3-padding-16"><b>قیمت(دلار) : </b> {{coin_price}}</li>
+        <li class="w3-padding-16"><b>بالاترین قیمت :</b> {{high_24h}}</li>
+        <li class="w3-padding-16"><b>پایین ترین قیمت :</b> {{low_24h}}</li>
+        <li class="w3-padding-16"><b>تغییرات (24h):</b> {{price_change_24h}}</li>
+        <li class="w3-padding-16"><b>درصد تغییرات (24h):</b>{{price_change_percentage_24h}}</li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          <button class="w3-button w3-black w3-padding-large"><img src={{image}}></button>
         </li>
       </ul>
     </div>
@@ -196,21 +194,6 @@ body, html {
     <!-- Image of location/map -->
     {% load static %}
     <img src="{% static "ai.jpg" %}" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-  </div>
-</div>
-
-
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="image">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>تصویر</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
   </div>
 </div>
 

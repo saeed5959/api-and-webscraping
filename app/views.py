@@ -12,12 +12,24 @@ def home(request):
 
     if request.method=='POST':
         coin = request.POST.get('search')
-        coin_price = coin_api.price(coin)
-        return HttpResponse(t.render({"gold_price": gold_price, "gold_change": gold_change,
-                                      "dollar_price": dollar_price, "dollar_change": dollar_change,
-                                      "stock_price": stock_price, "stock_change": stock_change,
-                                      "coin": coin, "coin_price": coin_price,}, request))
+        coin_object = coin_api.market(coin)
+        if coin_object.text!='[]':
+            coin_market = coin_object.json()[0]
+            return HttpResponse(t.render({"gold_price": gold_price, "gold_change": gold_change,
+                                          "dollar_price": dollar_price, "dollar_change": dollar_change,
+                                          "stock_price": stock_price, "stock_change": stock_change,
+                                          "coin": coin_market['name'], "coin_price": coin_market['current_price'],
+                                          "high_24h": coin_market["high_24h"], "low_24h": coin_market["low_24h"],
+                                          "price_change_24h": coin_market["price_change_24h"],
+                                          'price_change_percentage_24h': coin_market['price_change_percentage_24h'],
+                                          "image":coin_market["image"],"error":""}, request))
+        else:
+            return HttpResponse(t.render({"gold_price": gold_price, "gold_change": gold_change,
+                                          "dollar_price": dollar_price, "dollar_change": dollar_change,
+                                          "stock_price": stock_price, "stock_change": stock_change,
+                                          "error":"there is not such a coin"}, request))
 
     return HttpResponse(t.render({"gold_price":gold_price,"gold_change":gold_change,
                                   "dollar_price":dollar_price,"dollar_change":dollar_change,
-                                  "stock_price":stock_price,"stock_change":stock_change,}, request))
+                                  "stock_price":stock_price,"stock_change":stock_change,
+                                  "error": ""}, request))
