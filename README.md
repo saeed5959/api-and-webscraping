@@ -6,7 +6,7 @@ Back-end:Django(Python)
 Front-end:HTML&CSS
 ~~~~
 
-####This website contains :
+#### This website contains :
 
 ~~~~
 1)WEB SCRAPY
@@ -21,7 +21,7 @@ Front-end:HTML&CSS
     using "api" tool from  https://www.coingecko.com/
 
 ~~~~
-####How to use?
+#### How to use?
 ~~~~
 1)clone this repository
 git clone https://github.com/saeed5959/mywebsite
